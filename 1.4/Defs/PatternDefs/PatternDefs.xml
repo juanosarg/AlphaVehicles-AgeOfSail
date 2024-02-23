@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<Vehicles.PatternDef>
+		<defName>AV_Pattern_Logs</defName>
+		<label>Wood planks</label>
+		<path>Patterns/AV_Pattern_Logs</path>
+	</Vehicles.PatternDef>
+	
+	<Vehicles.PatternDef>
+		<defName>AV_Pattern_PlainLogs</defName>
+		<label>Wood planks 2</label>
+		<path>Patterns/AV_Pattern_PlainLogs</path>
+	</Vehicles.PatternDef>
+	
+
+</Defs>
