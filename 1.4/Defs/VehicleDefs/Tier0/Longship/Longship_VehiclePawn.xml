@@ -2,12 +2,11 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
-		<defName>AV_Junk</defName>
-		<label>Junk</label>
-		<description>A junk ship is a traditional sailing vessel known for its unique design, featuring a high stern and a flat bottom. It often employs multiple sails and was historically used for various maritime activities such as trade, fishing, and transportation.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x3</description>
-		
+		<defName>AV_Longship</defName>
+		<label>Longship</label>
+		<description>A type of narrow and relatively long boat with a sleek design, often equipped with sails for propulsion. It is commonly used for various purposes such as transportation, exploration, and warfare throughout history. Very fast for map travel, bot slow when crossing oceans in the world map.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x2</description>
 		<graphicData>
-			<texPath>Things/Vehicles/Sea/Tier0/AV_Junk/AV_Junk</texPath>
+			<texPath>Things/Vehicles/Sea/Tier0/AV_Longship/AV_Longship</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(8,8)</drawSize>
@@ -21,7 +20,7 @@
 		<fillPercent>1</fillPercent>
 		
 		
-		<buildDef>AV_Junk_Blueprint</buildDef>
+		<buildDef>AV_Longship_Blueprint</buildDef>
 		
 		<size>(3,6)</size>
 		
@@ -31,17 +30,17 @@
 		<vehicleType>Sea</vehicleType>
 				
 		<statBases>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
 			<ArmorRating_Heat>0</ArmorRating_Heat>
-			<MarketValue>750</MarketValue>
+			<MarketValue>1000</MarketValue>
 			<Flammability>1</Flammability>
 		</statBases>
 		
 		<vehicleStats>
 			<Mass>250</Mass>
-			<MoveSpeed>3</MoveSpeed>
-			<CargoCapacity>200</CargoCapacity>
+			<MoveSpeed>6</MoveSpeed>
+			<CargoCapacity>100</CargoCapacity>
 			<RepairRate>1</RepairRate>
 		</vehicleStats>
 		
@@ -66,8 +65,8 @@
 				<speed>2</speed>
 			</track>
 			
-			<worldSpeedMultiplier>0.9</worldSpeedMultiplier>
-			<winterSpeedMultiplier>5</winterSpeedMultiplier>
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier>
+			<winterSpeedMultiplier>2</winterSpeedMultiplier>
 			
 			<roles>
 				<li>
@@ -98,7 +97,7 @@
 				<li>
 					<key>Passenger</key>
 					<label>Passenger</label>
-					<slots>3</slots>
+					<slots>2</slots>
 					<exposed>false</exposed>
 					
 					<hitbox>
@@ -114,23 +113,11 @@
 		</properties>
 		
 		<components>
-			<li>
-				<key>Mizzen</key>
-				<label>Mizzen</label>
-				<health>30</health>
-				<priorityStatEfficiency>true</priorityStatEfficiency>
-				<depth>External</depth>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-				
-				
-			</li>
+
 			<li>
 				<key>MainMast</key>
 				<label>Main mast</label>
-				<health>30</health>
+				<health>90</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>External</depth>
 				
@@ -140,30 +127,47 @@
 				
 				
 			</li>
-			<li>
-				<key>Foremast</key>
-				<label>Foremast</label>
-				<health>30</health>
-				<priorityStatEfficiency>true</priorityStatEfficiency>
-				<depth>External</depth>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-				
-				
-			</li>
+			
 			<li>
 				<key>WoodenHull</key>
 				<label>Main wooden hull</label>
-				<health>80</health>
+				<health>120</health>
 				<depth>External</depth>
 				
 				<hitbox>
 					<side>Body</side>
 				</hitbox>
 			</li>
-			
+			<li>
+				<key>Shields</key>
+				<label>Shields</label>
+				<health>20</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>DragonHead</key>
+				<label>Dragon head</label>
+				<health>40</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Keel</key>
+				<label>Keel</label>
+				<health>40</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
 			<li>
 				<key>Rudder</key>
 				<label>Rudder</label>
