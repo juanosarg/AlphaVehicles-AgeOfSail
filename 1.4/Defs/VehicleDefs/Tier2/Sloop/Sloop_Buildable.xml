@@ -4,7 +4,7 @@
 	<Vehicles.VehicleBuildDef ParentName="VehicleBoatBaseBuildable">
 		<defName>AV_Sloop_Blueprint</defName>
 		<label>Sloop</label>
-		<description>A single-masted sailing vessel with a fore-and-aft rig, typically equipped with a mainsail and one or more headsails. Sleek and agile, sloops are versatile vessels used for various purposes such as racing, cruising, fishing, and coastal patrols.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x3</description>
+		<description>A single-masted sailing vessel with a fore-and-aft rig, typically equipped with a mainsail and one or more headsails. Sleek and agile, sloops are versatile vessels used for various purposes such as racing, cruising, fishing, and coastal patrols.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x3</description>
 	
 		
 		<graphicData>

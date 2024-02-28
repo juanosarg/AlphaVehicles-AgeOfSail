@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingCategoryDef>
+		<defName>AV_ShipParts</defName>
+		<label>ship parts</label>
+		<parent>Manufactured</parent>
+		<iconPath>UI/Categories/AV_ShipParts</iconPath>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+	</ThingCategoryDef>
+	<ThingDef Name="AV_ShipPartBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<drawerType>MapMeshOnly</drawerType>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>10</stackLimit>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>14</pathCost>
+		<allowedArchonexusCount>-1</allowedArchonexusCount>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<thingCategories>
+			<li>AV_ShipParts</li>
+		</thingCategories>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Cook</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workSkill>Crafting</workSkill>
+			<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+				
+			</recipeUsers>
+			<researchPrerequisite>AV_LateenSails</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef ParentName="AV_ShipPartBase">
+		<defName>AV_MastAndSails</defName>
+		<label>mast and sails</label>
+		<description>Masts and sails necessary for propulsion and navigation of a sailing ship.</description>
+		<graphicData>
+			<texPath>Things/Items/AV_Sailing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>50</Mass>
+			<WorkToMake>1000</WorkToMake>
+		</statBases>
+		<costList>
+			<WoodLog>50</WoodLog>
+			<Cloth>50</Cloth>
+			
+		</costList>
+		
+	</ThingDef>
+	<ThingDef ParentName="AV_ShipPartBase">
+		<defName>AV_Rigging</defName>
+		<label>rigging</label>
+		<description>A system of ropes, cables and chains which support and control a sailing ship's masts and sails.</description>
+		<graphicData>
+			<texPath>Things/Items/AV_Rigging</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>95</MarketValue>
+			<Mass>4</Mass>
+			<WorkToMake>500</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>10</Steel>
+			<Cloth>10</Cloth>
+		</costList>
+	</ThingDef>
+	<ThingDef ParentName="AV_ShipPartBase">
+		<defName>AV_SailingInstruments</defName>
+		<label>sailing instruments</label>
+		<description>Devices used aboard a ship to measure and monitor various factors such as wind speed, direction, depth of water, and navigation data, aiding sailors in safe and efficient navigation.</description>
+		<graphicData>
+			<texPath>Things/Items/AV_SailingInstruments</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>80</MarketValue>
+			<Mass>1</Mass>
+			<WorkToMake>250</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>40</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<tradeTags>
+			<li>AV_ShipParts</li>
+		</tradeTags>
+	</ThingDef>
+	<ThingDef ParentName="AV_ShipPartBase">
+		<defName>AV_ReinforcedWood</defName>
+		<label>reinforced wood</label>
+		<description>Panels of wood reinforced to withstand both impact and water pressure.</description>
+		<graphicData>
+			<texPath>Things/Items/AV_ReinforcedWood</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>90</MarketValue>
+			<Mass>3</Mass>
+			<WorkToMake>750</WorkToMake>
+		</statBases>
+		<costList>
+			<WoodLog>100</WoodLog>
+			<Steel>10</Steel>
+			<Plasteel>5</Plasteel>		
+		</costList>
+		<tradeTags>
+			<li>AV_ShipParts</li>
+		</tradeTags>
+	</ThingDef>
+	
+</Defs>

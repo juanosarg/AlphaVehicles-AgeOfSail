@@ -4,7 +4,7 @@
 	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
 		<defName>AV_PirateCaravel</defName>
 		<label>Pirate caravel</label>
-		<description>A caravel is a small, fast, and versatile sailing ship known for its narrow hull, multiple masts, and combination of square and lateen sails. It was widely used for exploration, trade, and naval activities during the Age of Discovery. This caravel has been modified to act as a fast moving warship.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x3</description>
+		<description>A caravel is a small, fast, and versatile sailing ship known for its narrow hull, multiple masts, and combination of square and lateen sails. It was widely used for exploration, trade, and naval activities during the Age of Discovery. This caravel has been modified to act as a fast moving warship.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Gunner x1, Passenger x2</description>
 		<graphicData>
 			<texPath>Things/Vehicles/Sea/Tier1/AV_PirateCaravel/AV_PirateCaravel</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
@@ -71,7 +71,7 @@
 			<roles>
 				<li>
 					<key>driver</key>
-					<label>Driver</label>
+					<label>Helmsman</label>
 					<exposed>false</exposed>
 					
 					<handlingTypes>
@@ -88,9 +88,26 @@
 					
 				</li>
 				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					
+					<exposed>false</exposed>
+					<handlingTypes>Turret</handlingTypes>
+					
+					<turretIds>
+						<li>portTurret</li>
+						<li>starboardTurret</li>
+					</turretIds>
+					
+				</li>
+				<li>
 					<key>Passenger</key>
 					<label>Passenger</label>
-					<slots>3</slots>
+					<slots>2</slots>
 					<exposed>false</exposed>
 					
 					<hitbox>

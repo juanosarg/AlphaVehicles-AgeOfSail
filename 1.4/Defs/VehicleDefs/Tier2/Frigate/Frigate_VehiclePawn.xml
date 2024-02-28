@@ -2,14 +2,15 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
-		<defName>AV_Caravel</defName>
-		<label>Caravel</label>
-		<description>A caravel is a small, fast, and versatile sailing ship known for its narrow hull, multiple masts, and combination of square and lateen sails. It was widely used for exploration, trade, and naval activities during the Age of Discovery.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x3</description>
+		<defName>AV_Frigate</defName>
+		<label>Frigate</label>
+		<description>A warship with a sleek design, fast and maneuverable, originally developed for escort and protection duties in the Age of Sail. Frigates usually feature a single continuous gun deck, carrying a mix of cannons and other armaments.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Gunner x1, Passenger x3</description>
+	
 		<graphicData>
-			<texPath>Things/Vehicles/Sea/Tier1/AV_Caravel/AV_Caravel</texPath>
+			<texPath>Things/Vehicles/Sea/Tier2/AV_Frigate/AV_Frigate</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(10,10)</drawSize>
+			<drawSize>(16,16)</drawSize>
 		
 			<color>(129, 85, 59)</color>
 			<colorTwo>(104, 64, 43)</colorTwo>
@@ -20,27 +21,27 @@
 		<fillPercent>1</fillPercent>
 		
 		
-		<buildDef>AV_Caravel_Blueprint</buildDef>
+		<buildDef>AV_Frigate_Blueprint</buildDef>
 		
-		<size>(4,7)</size>
+		<size>(6,9)</size>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
-		<vehicleCategory>Transport</vehicleCategory>
+		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Medieval</techLevel>
 		<vehicleType>Sea</vehicleType>
 				
 		<statBases>
-			<ArmorRating_Blunt>0.36</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.36</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
 			<ArmorRating_Heat>0</ArmorRating_Heat>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>4500</MarketValue>
 			<Flammability>1</Flammability>
 		</statBases>
 		
 		<vehicleStats>
-			<Mass>200</Mass>
-			<MoveSpeed>4</MoveSpeed>
-			<CargoCapacity>400</CargoCapacity>
+			<Mass>950</Mass>
+			<MoveSpeed>5</MoveSpeed>
+			<CargoCapacity>750</CargoCapacity>
 			<RepairRate>1</RepairRate>
 		</vehicleStats>
 		
@@ -55,11 +56,11 @@
 		
 		
 		<race>
-			<baseBodySize>5</baseBodySize>
+			<baseBodySize>10</baseBodySize>
 		</race>
 		
 		<properties>
-			<fishing>true</fishing>
+			<fishing>false</fishing>
 			<diagonalRotation>false</diagonalRotation>
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
@@ -88,6 +89,41 @@
 					
 				</li>
 				<li>
+					<key>boatswain</key>
+					<label>Boatswain</label>
+					<exposed>false</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					
+					<exposed>false</exposed>
+					<handlingTypes>Turret</handlingTypes>
+					
+					<turretIds>
+						<li>portTurret</li>
+						<li>starboardTurret</li>
+					</turretIds>
+					
+				</li>
+				<li>
 					<key>Passenger</key>
 					<label>Passenger</label>
 					<slots>3</slots>
@@ -110,7 +146,7 @@
 			<li>
 				<key>Mizzen</key>
 				<label>Mizzen</label>
-				<health>30</health>
+				<health>60</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>External</depth>
 				
@@ -123,7 +159,7 @@
 			<li>
 				<key>MainMast</key>
 				<label>Main mast</label>
-				<health>30</health>
+				<health>60</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>External</depth>
 				
@@ -136,7 +172,7 @@
 			<li>
 				<key>Foremast</key>
 				<label>Foremast</label>
-				<health>30</health>
+				<health>60</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>External</depth>
 				
@@ -149,7 +185,7 @@
 			<li>
 				<key>Castle</key>
 				<label>Castle</label>
-				<health>45</health>
+				<health>90</health>
 				<depth>External</depth>
 				
 				<hitbox>
@@ -159,7 +195,7 @@
 			<li>
 				<key>Forecastle</key>
 				<label>Forecastle</label>
-				<health>45</health>
+				<health>90</health>
 				<depth>External</depth>
 				
 				<hitbox>
@@ -180,7 +216,7 @@
 			<li>
 				<key>Keel</key>
 				<label>Keel</label>
-				<health>40</health>
+				<health>140</health>
 				<depth>External</depth>
 				
 				<hitbox>
@@ -190,7 +226,7 @@
 			<li>
 				<key>Rudder</key>
 				<label>Rudder</label>
-				<health>40</health>
+				<health>140</health>
 				<depth>External</depth>
 				
 				<hitbox>
@@ -198,6 +234,35 @@
 				</hitbox>
 			</li>
 		</components>
+		<comps>
+			
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>AV_Frigate_MainTurret</turretDef>
+						
+					
+						<gizmoLabel>Port Broadside</gizmoLabel>
+						<defaultAngleRotated>-90</defaultAngleRotated>
+						<angleRestricted>(180, 0)</angleRestricted>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>portTurret</key>
+					</li>
+					<li>
+						<turretDef>AV_Frigate_SecondTurret</turretDef>
+						
+					
+						<gizmoLabel>Starboard Broadside</gizmoLabel>
+						<defaultAngleRotated>90</defaultAngleRotated>
+						<angleRestricted>(0, 180)</angleRestricted>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>starboardTurret</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
 		
 		
 	</Vehicles.VehicleDef>

@@ -4,7 +4,7 @@
 	<Vehicles.VehicleBuildDef ParentName="VehicleBoatBaseBuildable">
 		<defName>AV_PirateCaravel_Blueprint</defName>
 		<label>Pirate caravel</label>
-		<description>A caravel is a small, fast, and versatile sailing ship known for its narrow hull, multiple masts, and combination of square and lateen sails. It was widely used for exploration, trade, and naval activities during the Age of Discovery. This caravel has been modified to act as a fast moving warship.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x3</description>
+		<description>A caravel is a small, fast, and versatile sailing ship known for its narrow hull, multiple masts, and combination of square and lateen sails. It was widely used for exploration, trade, and naval activities during the Age of Discovery. This caravel has been modified to act as a fast moving warship.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Gunner x1, Passenger x2</description>
 	
 		
 		<graphicData>
@@ -27,8 +27,11 @@
 		
 		<costList>
 		
-			<Cloth>100</Cloth>
-			<WoodLog>240</WoodLog>
+			<AV_MastAndSails>3</AV_MastAndSails>
+			<AV_Rigging>3</AV_Rigging>
+			<AV_SailingInstruments>1</AV_SailingInstruments>
+			<WoodLog>100</WoodLog>
+			<Steel>50</Steel>
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>

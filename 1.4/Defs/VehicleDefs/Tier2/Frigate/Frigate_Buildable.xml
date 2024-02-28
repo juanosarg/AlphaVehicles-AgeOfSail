@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBoatBaseBuildable">
+		<defName>AV_Frigate_Blueprint</defName>
+		<label>Frigate</label>
+		<description>A warship with a sleek design, fast and maneuverable, originally developed for escort and protection duties in the Age of Sail. Frigates usually feature a single continuous gun deck, carrying a mix of cannons and other armaments.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Gunner x1, Passenger x3</description>
+	
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier2/AV_Frigate/AV_Frigate</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(16,16)</drawSize>
+		</graphicData>
+		<designationCategory>VF_Vehicles</designationCategory>
+		<statBases>
+			<MaxHitPoints>760</MaxHitPoints>
+			<WorkToBuild>40000</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(6, 9)</size>
+		
+		<researchPrerequisites>
+			<li>AV_NavalTactics</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<AV_MastAndSails>3</AV_MastAndSails>
+			<AV_Rigging>4</AV_Rigging>
+			<AV_SailingInstruments>5</AV_SailingInstruments>
+			<AV_ReinforcedWood>4</AV_ReinforcedWood>
+			<Steel>50</Steel>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		
+		<thingToSpawn>AV_Frigate</thingToSpawn>
+	</Vehicles.VehicleBuildDef>
+</Defs>
