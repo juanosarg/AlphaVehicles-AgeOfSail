@@ -20,7 +20,7 @@
 		
 	</modDependencies>
 	<packageId>sarg.alphavehiclesageofsail</packageId>
-	<description>Adds 9 sailing ships.
+	<description>Adds 9 sailing ships in three different tiers. Junk, Cog and Longship for Tier 0 (no research, no ship parts). Caravel, Pirate caravel and Sloop for Tier 1 (research plus ship parts needed). Frigate, Galleon and Brig for Tier 2 (secondary research plus morer advanced ship parts needed).
 &lt;size=24&gt;Issues&lt;/size&gt;
 
 No issues tracked
@@ -31,7 +31,15 @@ More vehicles? Maybe!
 
 &lt;size=24&gt;Credit&lt;/size&gt;
 
-
+Original 3D models used as reference:
+Cog: https://sketchfab.com/3d-models/cog-4e4410f87bc64ea2ab2f5d3ea65a69c5
+Longship: https://sketchfab.com/3d-models/viking-drakkar-dae4af8855514be386fc5480105195ac
+Junk: https://sketchfab.com/3d-models/junk-9439705696e043fd88d08085783c91db
+Caravel: https://sketchfab.com/3d-models/caravel-ver-1-06f46ad618604a7db14a69d2e7279008
+Sloop: https://sketchfab.com/3d-models/sloop-7f9075dd4bd14a4ebeeb83647cf24224
+Frigate: https://sketchfab.com/3d-models/galleon-mayflower-multideck-ship-641793a8946e484bb7febee4f8437f55
+Galleon: https://sketchfab.com/3d-models/nao-victoria-galleon-ship-4b4d85651cde46478fc70177d30be296
+Brig: https://sketchfab.com/3d-models/brig-ship-68721ddcd324492188255449a5531e66
 
 &lt;size=24&gt;Compatibility&lt;/size&gt;
 
