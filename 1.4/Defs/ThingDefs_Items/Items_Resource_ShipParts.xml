@@ -44,6 +44,8 @@
 			<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
 			<recipeUsers>
 				<li>CraftingSpot</li>
+				<li>FueledSmithy</li>
+				<li>ElectricSmithy</li>
 				
 			</recipeUsers>
 			<researchPrerequisite>AV_LateenSails</researchPrerequisite>
