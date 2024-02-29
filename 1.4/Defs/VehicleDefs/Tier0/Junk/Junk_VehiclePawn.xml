@@ -4,7 +4,7 @@
 	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
 		<defName>AV_Junk</defName>
 		<label>Junk</label>
-		<description>A junk ship is a traditional sailing vessel known for its unique design, featuring a high stern and a flat bottom. It often employs multiple sails and was historically used for various maritime activities such as trade, fishing, and transportation.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x3</description>
+		<description>A junk ship is a traditional sailing vessel known for its unique design, featuring a high stern and a flat bottom. It often employs multiple sails and was historically used for various maritime activities such as trade, fishing, and transportation.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x3</description>
 		
 		<graphicData>
 			<texPath>Things/Vehicles/Sea/Tier0/AV_Junk/AV_Junk</texPath>
@@ -12,10 +12,8 @@
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(8,8)</drawSize>
 		
-			<color>(129, 85, 59)</color>
-			<colorTwo>(104, 64, 43)</colorTwo>
-			<colorThree>(70, 45, 35)</colorThree>
-			<pattern>AV_Pattern_PlainLogs</pattern>
+			<color>(77, 35, 25)</color>
+		
 		</graphicData>
 		
 		<fillPercent>1</fillPercent>
@@ -91,8 +89,8 @@
 					
 						<drawOffsetNorth>(0, 0, -0.55)</drawOffsetNorth>
 						<drawOffsetSouth>(0, 0, 0.55)</drawOffsetSouth>
-						<drawOffsetEast>(-0.55, 0, 0.5)</drawOffsetEast>
-						<drawOffsetWest>(0.55, 0, 0.5)</drawOffsetWest>
+						<drawOffsetEast>(-0.55, 0, -0.5)</drawOffsetEast>
+						<drawOffsetWest>(0.55, 0, -0.5)</drawOffsetWest>
 					</pawnRenderer>
 				</li>
 				<li>

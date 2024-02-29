@@ -4,7 +4,7 @@
 	<Vehicles.VehicleBuildDef ParentName="VehicleBoatBaseBuildable">
 		<defName>AV_Galleon_Blueprint</defName>
 		<label>Galleon</label>
-		<description>A large, multi-decked sailing ship primarily designed for transporting goods over long distances across oceans. It features a sturdy hull with ample cargo hold space, multiple masts rigged with square sails for propulsion, and a high stern and forecastle for additional cargo storage and crew quarters.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Passenger x4</description>
+		<description>A large, multi-decked sailing ship primarily designed for transporting goods over long distances across oceans. It features a sturdy hull with ample cargo hold space, multiple masts rigged with square sails for propulsion, and a high stern and forecastle for additional cargo storage and crew quarters.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Passenger x4</description>
 	
 		
 		<graphicData>
@@ -19,7 +19,7 @@
 			<Flammability>1</Flammability>
 		</statBases>
 		
-		<size>(6, 9)</size>
+		<size>(5, 9)</size>
 		
 		<researchPrerequisites>
 			<li>AV_NavalTactics</li>

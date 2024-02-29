@@ -4,7 +4,7 @@
 	<Vehicles.VehicleBuildDef ParentName="VehicleBoatBaseBuildable">
 		<defName>AV_Frigate_Blueprint</defName>
 		<label>Frigate</label>
-		<description>A warship with a sleek design, fast and maneuverable, originally developed for escort and protection duties in the Age of Sail. Frigates usually feature a single continuous gun deck, carrying a mix of cannons and other armaments.n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Gunner x1, Passenger x3</description>
+		<description>A warship with a sleek design, fast and maneuverable, originally developed for escort and protection duties in the Age of Sail. Frigates usually feature a single continuous gun deck, carrying a mix of cannons and other armaments.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Gunner x1, Passenger x3</description>
 	
 		
 		<graphicData>
@@ -19,7 +19,7 @@
 			<Flammability>1</Flammability>
 		</statBases>
 		
-		<size>(6, 9)</size>
+		<size>(5, 9)</size>
 		
 		<researchPrerequisites>
 			<li>AV_NavalTactics</li>
