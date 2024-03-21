@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBoatBaseBuildable">
+		<defName>AV_Cog_Blueprint</defName>
+		<label>Cog</label>
+		<description>A medieval sailing vessel characterized by a sturdy, broad-bottomed design with a single mast and a square-rigged sail. It was commonly used for trade, transportation, and exploration during the Middle Ages in Europe. Very slow for map travel, bot very fast when crossing oceans in the world map.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1.</description>
+	
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier0/AV_Cog/AV_Cog</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(8,8)</drawSize>
+		</graphicData>
+		<designationCategory>VF_Vehicles</designationCategory>
+		<statBases>
+			<MaxHitPoints>340</MaxHitPoints>
+			<WorkToBuild>16000</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(3, 6)</size>
+		
+	
+		
+		<costList>
+		
+			<Cloth>80</Cloth>
+			<WoodLog>400</WoodLog>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		
+		<thingToSpawn>AV_Cog</thingToSpawn>
+	</Vehicles.VehicleBuildDef>
+</Defs>

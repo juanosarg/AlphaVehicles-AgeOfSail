@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseBullet">
+		<defName>AV_Cannonball</defName>
+		<label>Cannon Ball</label>
+		<graphicData>
+			<texPath>Things/Projectiles/AV_Cannonball</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<speed>30</speed>
+			<explosionRadius>1</explosionRadius>
+			<flyOverhead>false</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+	</ThingDef>
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>AV_PirateCaravel_MainTurret</defName>
+		<label>broadside</label>
+		<description>A simultaneous firing of all the guns on one side of the warship.</description>
+		<turretType>Static</turretType>
+		<shotSound>MortarBomb_Explode</shotSound>
+		<projectile>AV_Cannonball</projectile>
+		<reloadTimer>10</reloadTimer>
+		<warmUpTimer>4.5</warmUpTimer>
+		<magazineCapacity>9</magazineCapacity>
+		<chargePerAmmoCount>1</chargePerAmmoCount>
+		<genericAmmo>true</genericAmmo>
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>1.2</rotationSpeed>
+		<restrictionType>Vehicles.TurretRestrictions_Stationary</restrictionType>
+		<projectileOffset>2.5</projectileOffset>
+		<hitFlags>IntendedTarget</hitFlags>
+		<maxRange>30</maxRange>
+		<minRange>8</minRange>
+		
+		<vehicleRecoil>
+			<distanceTotal>0.1</distanceTotal>
+			<distancePerTick>0.05</distancePerTick>
+			<speedMultiplierPostRecoil>0.55</speedMultiplierPostRecoil>
+		</vehicleRecoil>
+		<fireModes>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenBursts>10</ticksBetweenBursts>
+				<spreadRadius>15</spreadRadius>
+				<label>Broadside</label>
+				<texPath>UI/Gizmos/AV_Broadside</texPath>
+			</li>
+		</fireModes>
+		<graphicData>
+			<texPath>UI/Empty/Empty</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>Cutout</shaderType>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<ammunition>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</ammunition>
+		<motes>
+			<li>
+				<cycles>1</cycles>
+				<moteDef>Mote_CannonPlume</moteDef>
+				<animationType>Reset</animationType>
+			</li>
+		</motes>
+	</Vehicles.VehicleTurretDef>
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>AV_PirateCaravel_SecondTurret</defName>
+		<label>broadside</label>
+		<description>A simultaneous firing of all the guns on one side of the warship.</description>
+		<turretType>Static</turretType>
+		<shotSound>MortarBomb_Explode</shotSound>
+		<projectile>AV_Cannonball</projectile>
+		<reloadTimer>10</reloadTimer>
+		<warmUpTimer>4.5</warmUpTimer>
+		<magazineCapacity>9</magazineCapacity>
+		<chargePerAmmoCount>1</chargePerAmmoCount>
+		<genericAmmo>true</genericAmmo>
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>1.2</rotationSpeed>
+		<restrictionType>Vehicles.TurretRestrictions_Stationary</restrictionType>
+		<projectileOffset>2.5</projectileOffset>
+		<hitFlags>IntendedTarget</hitFlags>
+		<maxRange>30</maxRange>
+		<minRange>8</minRange>
+		
+		<vehicleRecoil>
+			<distanceTotal>0.1</distanceTotal>
+			<distancePerTick>0.05</distancePerTick>
+			<speedMultiplierPostRecoil>0.55</speedMultiplierPostRecoil>
+		</vehicleRecoil>
+		<fireModes>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenBursts>10</ticksBetweenBursts>
+				<spreadRadius>15</spreadRadius>
+				<label>Broadside</label>
+				<texPath>UI/Gizmos/AV_Broadside</texPath>
+			</li>
+		</fireModes>
+		<graphicData>
+			<texPath>UI/Empty/Empty</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>Cutout</shaderType>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<ammunition>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</ammunition>
+		<motes>
+			<li>
+				<cycles>1</cycles>
+				<moteDef>Mote_CannonPlume</moteDef>
+				<animationType>Reset</animationType>
+			</li>
+		</motes>
+	</Vehicles.VehicleTurretDef>
+</Defs>

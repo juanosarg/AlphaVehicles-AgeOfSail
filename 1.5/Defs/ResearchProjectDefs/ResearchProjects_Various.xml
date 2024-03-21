@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ResearchProjectDef>
+    <defName>AV_LateenSails</defName>
+    <label>lateen sails</label>
+    <description>A type of triangular sail that is rigged to a mast at an angle, allowing for efficient sailing close to the wind. Lateen sails were particularly advantageous for long-distance voyages and exploration during the Age of Discovery.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Medieval</techLevel>	
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+	<tab>AV_AlphaVehicles</tab>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>AV_NavalTactics</defName>
+    <label>naval tactics</label>
+    <description>Naval tactics encompass strategies and maneuvers employed by naval forces during maritime engagements. These tactics allow the construction of larger, more efficient naval vessels, but they require complex machines to be built.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+      <li>AV_LateenSails</li>
+    </prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+	<tab>AV_AlphaVehicles</tab>
+  </ResearchProjectDef>
+  
+ 
+</Defs>

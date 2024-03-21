@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBoatBaseBuildable">
+		<defName>AV_Junk_Blueprint</defName>
+		<label>Junk</label>
+		<description>A junk ship is a traditional sailing vessel known for its unique design, featuring a high stern and a flat bottom. It often employs multiple sails and was historically used for various maritime activities such as trade, fishing, and transportation.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x3</description>
+	
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier0/AV_Junk/AV_Junk</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(8,8)</drawSize>
+		</graphicData>
+		<designationCategory>VF_Vehicles</designationCategory>
+		<statBases>
+			<MaxHitPoints>210</MaxHitPoints>
+			<WorkToBuild>15000</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(3, 6)</size>
+		
+	
+		
+		<costList>
+		
+			<Cloth>60</Cloth>
+			<WoodLog>260</WoodLog>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		
+		<thingToSpawn>AV_Junk</thingToSpawn>
+	</Vehicles.VehicleBuildDef>
+</Defs>

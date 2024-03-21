@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
+		<defName>AV_Frigate</defName>
+		<label>Frigate</label>
+		<description>A warship with a sleek design, fast and maneuverable, originally developed for escort and protection duties in the Age of Sail. Frigates usually feature a single continuous gun deck, carrying a mix of cannons and other armaments.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Gunner x1, Passenger x3</description>
+	
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier2/AV_Frigate/AV_Frigate</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(16,16)</drawSize>
+		
+			<color>(147, 137, 125)</color>
+		
+		</graphicData>
+		
+		<fillPercent>1</fillPercent>
+		
+		
+		<buildDef>AV_Frigate_Blueprint</buildDef>
+		
+		<size>(5,9)</size>
+		
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Medieval</techLevel>
+		<vehicleType>Sea</vehicleType>
+				
+		<statBases>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<MarketValue>4500</MarketValue>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<vehicleStats>
+			<Mass>950</Mass>
+			<MoveSpeed>5</MoveSpeed>
+			<CargoCapacity>750</CargoCapacity>
+			<RepairRate>1</RepairRate>
+		</vehicleStats>
+		
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Wind</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		
+		
+		
+		<race>
+			<baseBodySize>10</baseBodySize>
+		</race>
+		
+		<properties>
+			<fishing>false</fishing>
+			<diagonalRotation>false</diagonalRotation>
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>2</speed>
+			</track>
+			
+			<worldSpeedMultiplier>1</worldSpeedMultiplier>
+			<winterSpeedMultiplier>5</winterSpeedMultiplier>
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Helmsman</label>
+					<exposed>false</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					
+				</li>
+				<li>
+					<key>boatswain</key>
+					<label>Boatswain</label>
+					<exposed>false</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					
+					<exposed>false</exposed>
+					<handlingTypes>Turret</handlingTypes>
+					
+					<turretIds>
+						<li>portTurret</li>
+						<li>starboardTurret</li>
+					</turretIds>
+					
+				</li>
+				<li>
+					<key>Passenger</key>
+					<label>Passenger</label>
+					<slots>3</slots>
+					<exposed>false</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+						<noOverlapWith>
+							<li>Back</li>
+						</noOverlapWith>
+					</hitbox>
+					
+				</li>
+				
+			</roles>
+		</properties>
+		
+		<components>
+
+			<li>
+				<key>Mizzen</key>
+				<label>Mizzen</label>
+				<health>60</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				
+			</li>
+			<li>
+				<key>MainMast</key>
+				<label>Main mast</label>
+				<health>60</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				
+			</li>
+			<li>
+				<key>Foremast</key>
+				<label>Foremast</label>
+				<health>60</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				
+			</li>
+			<li>
+				<key>Castle</key>
+				<label>Castle</label>
+				<health>90</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Forecastle</key>
+				<label>Forecastle</label>
+				<health>90</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>WoodenHull</key>
+				<label>Main wooden hull</label>
+				<health>120</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			
+			<li>
+				<key>Keel</key>
+				<label>Keel</label>
+				<health>140</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Rudder</key>
+				<label>Rudder</label>
+				<health>140</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+		</components>
+		<comps>
+			
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>AV_Frigate_MainTurret</turretDef>
+						
+					
+						<gizmoLabel>Port Broadside</gizmoLabel>
+						<defaultAngleRotated>-90</defaultAngleRotated>
+						<angleRestricted>(180, 0)</angleRestricted>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>portTurret</key>
+					</li>
+					<li>
+						<turretDef>AV_Frigate_SecondTurret</turretDef>
+						
+					
+						<gizmoLabel>Starboard Broadside</gizmoLabel>
+						<defaultAngleRotated>90</defaultAngleRotated>
+						<angleRestricted>(0, 180)</angleRestricted>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>starboardTurret</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+		
+		
+	</Vehicles.VehicleDef>
+</Defs>

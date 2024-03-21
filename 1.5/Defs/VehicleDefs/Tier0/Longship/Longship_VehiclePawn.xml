@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
+		<defName>AV_Longship</defName>
+		<label>Longship</label>
+		<description>A type of narrow and relatively long boat with a sleek design, often equipped with sails for propulsion. It is commonly used for various purposes such as transportation, exploration, and warfare throughout history. Very fast for map travel, bot slow when crossing oceans in the world map.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x2</description>
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier0/AV_Longship/AV_Longship</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(8,8)</drawSize>
+		
+			<color>(129, 85, 59)</color>
+			<colorTwo>(104, 64, 43)</colorTwo>
+			<colorThree>(70, 45, 35)</colorThree>
+			<pattern>AV_Pattern_PlainLogs</pattern>
+		</graphicData>
+		
+		<fillPercent>1</fillPercent>
+		
+		
+		<buildDef>AV_Longship_Blueprint</buildDef>
+		
+		<size>(3,6)</size>
+		
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Medieval</techLevel>
+		<vehicleType>Sea</vehicleType>
+				
+		<statBases>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<MarketValue>1000</MarketValue>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<vehicleStats>
+			<Mass>250</Mass>
+			<MoveSpeed>6</MoveSpeed>
+			<CargoCapacity>100</CargoCapacity>
+			<RepairRate>1</RepairRate>
+		</vehicleStats>
+		
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Wind</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		
+		
+		
+		<race>
+			<baseBodySize>4</baseBodySize>
+		</race>
+		
+		<properties>
+			<fishing>true</fishing>
+			<diagonalRotation>false</diagonalRotation>
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>2</speed>
+			</track>
+			
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier>
+			<winterSpeedMultiplier>2</winterSpeedMultiplier>
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Helmsman</label>
+					<exposed>true</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					<pawnRenderer>
+						<layerSouth>-1</layerSouth>
+						<layerNorth>1</layerNorth>
+					
+						<drawOffsetNorth>(0, 0, -0.55)</drawOffsetNorth>
+						<drawOffsetSouth>(0, 0, 0.55)</drawOffsetSouth>
+						<drawOffsetEast>(-0.55, 0, -0.4)</drawOffsetEast>
+						<drawOffsetWest>(0.55, 0, -0.4)</drawOffsetWest>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>Passenger</key>
+					<label>Passenger</label>
+					<slots>2</slots>
+					<exposed>false</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+						<noOverlapWith>
+							<li>Back</li>
+						</noOverlapWith>
+					</hitbox>
+					
+				</li>
+				
+			</roles>
+		</properties>
+		
+		<components>
+
+			<li>
+				<key>MainMast</key>
+				<label>Main mast</label>
+				<health>90</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				
+			</li>
+			
+			<li>
+				<key>WoodenHull</key>
+				<label>Main wooden hull</label>
+				<health>120</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Shields</key>
+				<label>Shields</label>
+				<health>20</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>DragonHead</key>
+				<label>Dragon head</label>
+				<health>40</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Keel</key>
+				<label>Keel</label>
+				<health>40</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Rudder</key>
+				<label>Rudder</label>
+				<health>40</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+		</components>
+		
+		
+	</Vehicles.VehicleDef>
+</Defs>

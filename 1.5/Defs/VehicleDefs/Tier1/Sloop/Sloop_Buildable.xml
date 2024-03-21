@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBoatBaseBuildable">
+		<defName>AV_Sloop_Blueprint</defName>
+		<label>Sloop</label>
+		<description>A single-masted sailing vessel with a fore-and-aft rig, typically equipped with a mainsail and one or more headsails. Sleek and agile, sloops are versatile vessels used for various purposes such as racing, cruising, fishing, and coastal patrols.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x3</description>
+	
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier1/AV_Sloop/AV_Sloop</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(7,7)</drawSize>
+		</graphicData>
+		<designationCategory>VF_Vehicles</designationCategory>
+		<statBases>
+			<MaxHitPoints>290</MaxHitPoints>
+			<WorkToBuild>14000</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(3, 6)</size>
+		
+		<researchPrerequisites>
+			<li>AV_LateenSails</li>
+		</researchPrerequisites>
+		
+		<costList>
+		
+			<AV_MastAndSails>1</AV_MastAndSails>
+			<AV_Rigging>1</AV_Rigging>
+			<AV_SailingInstruments>2</AV_SailingInstruments>
+			<Plasteel>50</Plasteel>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		
+		<thingToSpawn>AV_Sloop</thingToSpawn>
+	</Vehicles.VehicleBuildDef>
+</Defs>

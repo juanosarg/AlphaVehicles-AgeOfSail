@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
+		<defName>AV_Brig</defName>
+		<label>Brig</label>
+		<description>A two-masted sailing vessel with square rigging on both masts, typically carrying a fore-and-aft sail on the aftermast. Brigs were widely used for both naval and merchant purposes due to their combination of maneuverability and relatively large cargo capacity.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Passenger x10</description>
+	
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier2/AV_Brig/AV_Brig</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(15,15)</drawSize>
+		
+			<color>(189, 182, 173)</color>
+			<colorTwo>(202, 196, 187)</colorTwo>
+			<colorThree>(93, 88, 77)</colorThree>
+			<pattern>AV_Pattern_Logs</pattern>
+		</graphicData>
+		
+		<fillPercent>1</fillPercent>
+		
+		
+		<buildDef>AV_Brig_Blueprint</buildDef>
+		
+		<size>(5,9)</size>
+		
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Medieval</techLevel>
+		<vehicleType>Sea</vehicleType>
+				
+		<statBases>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<MarketValue>3250</MarketValue>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<vehicleStats>
+			<Mass>500</Mass>
+			<MoveSpeed>5</MoveSpeed>
+			<CargoCapacity>500</CargoCapacity>
+			<RepairRate>1</RepairRate>
+		</vehicleStats>
+		
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Wind</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		
+		
+		
+		<race>
+			<baseBodySize>8</baseBodySize>
+		</race>
+		
+		<properties>
+			<fishing>false</fishing>
+			<diagonalRotation>false</diagonalRotation>
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>2</speed>
+			</track>
+			
+			<worldSpeedMultiplier>1.3</worldSpeedMultiplier>
+			<winterSpeedMultiplier>4</winterSpeedMultiplier>
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Helmsman</label>
+					<exposed>false</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					
+				</li>
+				<li>
+					<key>boatswain</key>
+					<label>Boatswain</label>
+					<exposed>false</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					
+				</li>
+				<li>
+					<key>Passenger</key>
+					<label>Passenger</label>
+					<slots>10</slots>
+					<exposed>false</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+						<noOverlapWith>
+							<li>Back</li>
+						</noOverlapWith>
+					</hitbox>
+					
+				</li>
+				
+			</roles>
+		</properties>
+		
+		<components>
+
+			
+			<li>
+				<key>MainMast</key>
+				<label>Main mast</label>
+				<health>60</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				
+			</li>
+			<li>
+				<key>Foremast</key>
+				<label>Foremast</label>
+				<health>60</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				
+			</li>
+			
+			<li>
+				<key>WoodenHull</key>
+				<label>Main wooden hull</label>
+				<health>120</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			
+			<li>
+				<key>Keel</key>
+				<label>Keel</label>
+				<health>140</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Rudder</key>
+				<label>Rudder</label>
+				<health>140</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+		</components>
+		
+		
+	</Vehicles.VehicleDef>
+</Defs>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
+		<defName>AV_Cog</defName>
+		<label>Cog</label>
+		<description>A medieval sailing vessel characterized by a sturdy, broad-bottomed design with a single mast and a square-rigged sail. It was commonly used for trade, transportation, and exploration during the Middle Ages in Europe. Very slow for map travel, bot very fast when crossing oceans in the world map.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1.</description>
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier0/AV_Cog/AV_Cog</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(8,8)</drawSize>
+		
+			<color>(129, 85, 59)</color>
+			<colorTwo>(104, 64, 43)</colorTwo>
+			<colorThree>(70, 45, 35)</colorThree>
+			<pattern>AV_Pattern_PlainLogs</pattern>
+		</graphicData>
+		
+		<fillPercent>1</fillPercent>
+		
+		
+		<buildDef>AV_Cog_Blueprint</buildDef>
+		
+		<size>(3,6)</size>
+		
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Medieval</techLevel>
+		<vehicleType>Sea</vehicleType>
+				
+		<statBases>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<MarketValue>1000</MarketValue>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<vehicleStats>
+			<Mass>250</Mass>
+			<MoveSpeed>2</MoveSpeed>
+			<CargoCapacity>500</CargoCapacity>
+			<RepairRate>1</RepairRate>
+		</vehicleStats>
+		
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Wind</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		
+		
+		
+		<race>
+			<baseBodySize>4</baseBodySize>
+		</race>
+		
+		<properties>
+			<fishing>true</fishing>
+			<diagonalRotation>false</diagonalRotation>
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>2</speed>
+			</track>
+			
+			<worldSpeedMultiplier>1.2</worldSpeedMultiplier>
+			<winterSpeedMultiplier>5</winterSpeedMultiplier>
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Helmsman</label>
+					<exposed>false</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					
+				</li>
+				
+				
+			</roles>
+		</properties>
+		
+		<components>
+
+			<li>
+				<key>MainMast</key>
+				<label>Main mast</label>
+				<health>90</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				
+			</li>
+			
+			<li>
+				<key>WoodenHull</key>
+				<label>Main wooden hull</label>
+				<health>80</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Castle</key>
+				<label>Castle</label>
+				<health>45</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Forecastle</key>
+				<label>Forecastle</label>
+				<health>45</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+		
+			<li>
+				<key>Keel</key>
+				<label>Keel</label>
+				<health>40</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Rudder</key>
+				<label>Rudder</label>
+				<health>40</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+		</components>
+		
+		
+	</Vehicles.VehicleDef>
+</Defs>

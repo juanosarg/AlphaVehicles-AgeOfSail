@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBoatBaseBuildable">
+		<defName>AV_Longship_Blueprint</defName>
+		<label>Longship</label>
+		<description>A type of narrow and relatively long boat with a sleek design, often equipped with sails for propulsion. It is commonly used for various purposes such as transportation, exploration, and warfare throughout history. Very fast for map travel, bot slow when crossing oceans in the world map.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x2</description>
+	
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier0/AV_Longship/AV_Longship</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(8,8)</drawSize>
+		</graphicData>
+		<designationCategory>VF_Vehicles</designationCategory>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>15000</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(3, 6)</size>
+		
+	
+		
+		<costList>
+		
+			<Cloth>100</Cloth>
+			<WoodLog>240</WoodLog>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		
+		<thingToSpawn>AV_Longship</thingToSpawn>
+	</Vehicles.VehicleBuildDef>
+</Defs>
