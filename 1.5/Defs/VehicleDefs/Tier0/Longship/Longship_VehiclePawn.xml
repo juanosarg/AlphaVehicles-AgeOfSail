@@ -64,6 +64,7 @@
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
 			</track>
+			<riverCost>1</riverCost>
 			
 			<worldSpeedMultiplier>0.5</worldSpeedMultiplier>
 			<winterSpeedMultiplier>2</winterSpeedMultiplier>

@@ -4,7 +4,7 @@
 	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
 		<defName>AV_Galleon</defName>
 		<label>Galleon</label>
-		<description>A large, multi-decked sailing ship primarily designed for transporting goods over long distances across oceans. It features a sturdy hull with ample cargo hold space, multiple masts rigged with square sails for propulsion, and a high stern and forecastle for additional cargo storage and crew quarters.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Passenger x4</description>
+		<description>A large, multi-decked sailing ship primarily designed for transporting goods over long distances across oceans. It features a sturdy hull with ample cargo hold space, multiple masts rigged with square sails for propulsion, and a high stern and forecastle for additional cargo storage and crew quarters. Very slow on rivers due to their size.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Passenger x4</description>
 		<graphicData>
 			<texPath>Things/Vehicles/Sea/Tier2/AV_Galleon/AV_Galleon</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
@@ -64,7 +64,7 @@
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
 			</track>
-			
+			<riverCost>3</riverCost>
 			<worldSpeedMultiplier>1</worldSpeedMultiplier>
 			<winterSpeedMultiplier>5</winterSpeedMultiplier>
 			

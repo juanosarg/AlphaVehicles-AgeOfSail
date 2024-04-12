@@ -58,6 +58,7 @@
 		</race>
 		
 		<properties>
+		<riverCost>1</riverCost>
 			<fishing>true</fishing>
 			<diagonalRotation>false</diagonalRotation>
 			<track Class = "Vehicles.VehicleTrack_Wake">
