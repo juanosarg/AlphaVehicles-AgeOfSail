@@ -55,7 +55,7 @@
 				<speed>2</speed>
 			</track>
 			<riverCost>1</riverCost>
-			<worldSpeedMultiplier>5</worldSpeedMultiplier>
+			<worldSpeedMultiplier>4</worldSpeedMultiplier>
 			<winterSpeedMultiplier>5</winterSpeedMultiplier>
 			<roles>
 				<li>
