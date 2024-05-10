@@ -10,7 +10,12 @@
 			<texPath>Things/Vehicles/Sea/Tier2/AV_Frigate/AV_Frigate</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(16,16)</drawSize>
+			<drawSize>(20,20)</drawSize>
+			<drawOffset>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>1.5</z>
+			</drawOffset>
 		
 			<color>(147, 137, 125)</color>
 		
@@ -21,7 +26,7 @@
 		
 		<buildDef>AV_Frigate_Blueprint</buildDef>
 		
-		<size>(5,9)</size>
+		<size>(4,15)</size>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Combat</vehicleCategory>
@@ -39,7 +44,7 @@
 		<vehicleStats>
 			<Mass>950</Mass>
 			<MoveSpeed>5</MoveSpeed>
-			<CargoCapacity>750</CargoCapacity>
+			<CargoCapacity>400</CargoCapacity>
 			<RepairRate>1</RepairRate>
 		</vehicleStats>
 		
@@ -64,7 +69,7 @@
 				<speed>2</speed>
 			</track>
 			<riverCost>3</riverCost>
-			<worldSpeedMultiplier>1</worldSpeedMultiplier>
+			<worldSpeedMultiplier>3.2</worldSpeedMultiplier>
 			<winterSpeedMultiplier>5</winterSpeedMultiplier>
 			
 			<roles>

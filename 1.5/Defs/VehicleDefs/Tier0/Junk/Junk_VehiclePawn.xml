@@ -10,7 +10,12 @@
 			<texPath>Things/Vehicles/Sea/Tier0/AV_Junk/AV_Junk</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(8,8)</drawSize>
+			<drawSize>(12,12)</drawSize>
+			<drawOffset>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>1.75</z>
+			</drawOffset>
 		
 			<color>(77, 35, 25)</color>
 		
@@ -21,7 +26,7 @@
 		
 		<buildDef>AV_Junk_Blueprint</buildDef>
 		
-		<size>(3,6)</size>
+		<size>(2,9)</size>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
@@ -58,14 +63,14 @@
 		</race>
 		
 		<properties>
-		<riverCost>1</riverCost>
+		<riverCost>0.75</riverCost>
 			<fishing>true</fishing>
 			<diagonalRotation>false</diagonalRotation>
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
 			</track>
 			
-			<worldSpeedMultiplier>0.9</worldSpeedMultiplier>
+			<worldSpeedMultiplier>2.9</worldSpeedMultiplier>
 			<winterSpeedMultiplier>5</winterSpeedMultiplier>
 			
 			<roles>
@@ -90,8 +95,8 @@
 					
 						<drawOffsetNorth>(0, 0, -0.55)</drawOffsetNorth>
 						<drawOffsetSouth>(0, 0, 0.55)</drawOffsetSouth>
-						<drawOffsetEast>(-0.55, 0, -0.5)</drawOffsetEast>
-						<drawOffsetWest>(0.55, 0, -0.5)</drawOffsetWest>
+						<drawOffsetEast>(-0.75, 0, 0.45)</drawOffsetEast>
+						<drawOffsetWest>(0.75, 0, 0.45)</drawOffsetWest>
 					</pawnRenderer>
 				</li>
 				<li>
