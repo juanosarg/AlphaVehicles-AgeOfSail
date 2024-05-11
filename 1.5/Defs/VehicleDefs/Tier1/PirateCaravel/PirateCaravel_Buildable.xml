@@ -10,7 +10,12 @@
 		<graphicData>
 			<texPath>Things/Vehicles/Sea/Tier1/AV_PirateCaravel/AV_PirateCaravel</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(10,10)</drawSize>
+			<drawSize>(18,18)</drawSize>
+			<drawOffset>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>3.0</z>
+			</drawOffset>
 		</graphicData>
 		<designationCategory>VF_Vehicles</designationCategory>
 		<statBases>
@@ -19,7 +24,7 @@
 			<Flammability>1</Flammability>
 		</statBases>
 		
-		<size>(4, 7)</size>
+		<size>(4,14)</size>
 		
 		<researchPrerequisites>
 			<li>AV_LateenSails</li>

@@ -10,7 +10,12 @@
 		<graphicData>
 			<texPath>Things/Vehicles/Sea/Tier2/AV_Frigate/AV_Frigate</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(16,16)</drawSize>
+			<drawSize>(20,20)</drawSize>
+			<drawOffset>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>1.5</z>
+			</drawOffset>
 		</graphicData>
 		<designationCategory>VF_Vehicles</designationCategory>
 		<statBases>
@@ -19,7 +24,7 @@
 			<Flammability>1</Flammability>
 		</statBases>
 		
-		<size>(5, 9)</size>
+		<size>(4,15)</size>
 		
 		<researchPrerequisites>
 			<li>AV_NavalTactics</li>

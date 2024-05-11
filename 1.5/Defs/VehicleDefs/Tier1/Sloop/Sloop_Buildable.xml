@@ -10,7 +10,12 @@
 		<graphicData>
 			<texPath>Things/Vehicles/Sea/Tier1/AV_Sloop/AV_Sloop</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(7,7)</drawSize>
+			<drawSize>(12,12)</drawSize>
+			<drawOffset>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>1.5</z>
+			</drawOffset>
 		</graphicData>
 		<designationCategory>VF_Vehicles</designationCategory>
 		<statBases>
@@ -19,7 +24,7 @@
 			<Flammability>1</Flammability>
 		</statBases>
 		
-		<size>(3, 6)</size>
+		<size>(2, 8)</size>
 		
 		<researchPrerequisites>
 			<li>AV_LateenSails</li>

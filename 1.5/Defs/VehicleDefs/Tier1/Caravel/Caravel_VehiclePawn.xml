@@ -9,7 +9,12 @@
 			<texPath>Things/Vehicles/Sea/Tier1/AV_Caravel/AV_Caravel</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(10,10)</drawSize>
+			<drawSize>(18,18)</drawSize>
+			<drawOffset>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>3.0</z>
+			</drawOffset>
 		
 			<color>(129, 85, 59)</color>
 			<colorTwo>(104, 64, 43)</colorTwo>
@@ -22,7 +27,7 @@
 		
 		<buildDef>AV_Caravel_Blueprint</buildDef>
 		
-		<size>(4,7)</size>
+		<size>(4,14)</size>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
@@ -66,7 +71,7 @@
 			</track>
 			<riverCost>2</riverCost>
 			
-			<worldSpeedMultiplier>1</worldSpeedMultiplier>
+			<worldSpeedMultiplier>2.6</worldSpeedMultiplier>
 			<winterSpeedMultiplier>5</winterSpeedMultiplier>
 			
 			<roles>

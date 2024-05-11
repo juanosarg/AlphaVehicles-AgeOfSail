@@ -10,7 +10,12 @@
 		<graphicData>
 			<texPath>Things/Vehicles/Sea/Tier2/AV_Galleon/AV_Galleon</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(15,15)</drawSize>
+			<drawSize>(25,25)</drawSize>
+			<drawOffset>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>3.5</z>
+			</drawOffset>
 		</graphicData>
 		<designationCategory>VF_Vehicles</designationCategory>
 		<statBases>
@@ -19,7 +24,7 @@
 			<Flammability>1</Flammability>
 		</statBases>
 		
-		<size>(5, 9)</size>
+		<size>(6,18)</size>
 		
 		<researchPrerequisites>
 			<li>AV_NavalTactics</li>
