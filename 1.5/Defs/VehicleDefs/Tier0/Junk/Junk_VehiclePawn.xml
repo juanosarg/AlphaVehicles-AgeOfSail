@@ -70,7 +70,7 @@
 				<speed>2</speed>
 			</track>
 			
-			<worldSpeedMultiplier>2.9</worldSpeedMultiplier>
+			<worldSpeedMultiplier>2.4</worldSpeedMultiplier>
 			<winterSpeedMultiplier>5</winterSpeedMultiplier>
 			
 			<roles>
