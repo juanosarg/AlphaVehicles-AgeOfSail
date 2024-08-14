@@ -12,6 +12,53 @@
 						<li>VVE_GarageBench</li>
 					</value>
 				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="VVE_GarageDoorAbstract" Name="AV_GarageDoorBase_Water">
+							<defName>AV_GarageDoorWater</defName>
+							<label>water lock (1x5)</label>
+							<description>Divides rooms. Manual operation allows people to open it, letting vehicles through.</description>
+							<thingClass>VanillaVehiclesExpanded.GarageDoor</thingClass>
+							<stuffCategories Inherit="false">
+								<li>Woody</li>
+								<li>Metallic</li>
+							</stuffCategories>
+							<passability>Impassable</passability>
+							<defaultPlacingRot>South</defaultPlacingRot>
+							<statBases>
+								<WorkToBuild>8000</WorkToBuild>
+								<MaxHitPoints>120</MaxHitPoints>
+								<Flammability>1</Flammability>
+							</statBases>
+							<size>(5, 1)</size>
+							<graphicData>
+								<texPath>Things/Building/AV_WaterLock5x1_Mover</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<drawSize>(1, 1)</drawSize>
+								<damageData>
+									<enabled>false</enabled>
+								</damageData>
+							</graphicData>
+							<uiIconPath>Things/Building/AV_WaterLock5x1_MenuIcon</uiIconPath>
+							<costStuffCount>200</costStuffCount>
+							<designationHotKey>Misc2</designationHotKey>
+							<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+							<terrainAffordanceNeeded>ShallowWater</terrainAffordanceNeeded>
+							<useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+						</ThingDef>
+						<ThingDef ParentName="AV_GarageDoorBase_Water">
+							<defName>AV_GarageDoorWaterOpened</defName>
+							<passability>Standable</passability>
+							<designationCategory IsNull="True"/>
+							<researchPrerequisites IsNull="True"/>
+							<blockLight>false</blockLight>
+							<fillPercent>0</fillPercent>
+						</ThingDef>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
