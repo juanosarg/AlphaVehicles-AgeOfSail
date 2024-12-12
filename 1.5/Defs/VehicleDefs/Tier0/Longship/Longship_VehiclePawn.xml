@@ -9,7 +9,12 @@
 			<texPath>Things/Vehicles/Sea/Tier0/AV_Longship/AV_Longship</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(8,8)</drawSize>
+			<drawSize>(9,9)</drawSize>
+			<drawOffset>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>0.5</z>
+			</drawOffset>
 		
 			<color>(129, 85, 59)</color>
 			<colorTwo>(104, 64, 43)</colorTwo>
@@ -22,7 +27,7 @@
 		
 		<buildDef>AV_Longship_Blueprint</buildDef>
 		
-		<size>(3,6)</size>
+		<size>(2,8)</size>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
@@ -40,7 +45,7 @@
 		<vehicleStats>
 			<Mass>250</Mass>
 			<MoveSpeed>6</MoveSpeed>
-			<CargoCapacity>100</CargoCapacity>
+			<CargoCapacity>50</CargoCapacity>
 			<RepairRate>1</RepairRate>
 		</vehicleStats>
 		
@@ -64,9 +69,9 @@
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
 			</track>
-			<riverCost>1</riverCost>
+			<riverCost>0.75</riverCost>
 			
-			<worldSpeedMultiplier>0.5</worldSpeedMultiplier>
+			<worldSpeedMultiplier>1.2</worldSpeedMultiplier>
 			<winterSpeedMultiplier>2</winterSpeedMultiplier>
 			
 			<roles>
@@ -92,8 +97,8 @@
 					
 						<drawOffsetNorth>(0, 0, -0.55)</drawOffsetNorth>
 						<drawOffsetSouth>(0, 0, 0.55)</drawOffsetSouth>
-						<drawOffsetEast>(-0.55, 0, -0.4)</drawOffsetEast>
-						<drawOffsetWest>(0.55, 0, -0.4)</drawOffsetWest>
+						<drawOffsetEast>(-0.85, 0, 0.2)</drawOffsetEast>
+						<drawOffsetWest>(0.85, 0, 0.2)</drawOffsetWest>
 					</pawnRenderer>
 				</li>
 				<li>
