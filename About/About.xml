@@ -2,7 +2,7 @@
 	<name>Alpha Vehicles - Age of Sail</name>
 	<author>Sarg</author>
 	<supportedVersions>
-		<li>1.4</li>
+		<li>1.6</li>
 		<li>1.5</li>
 	</supportedVersions>
 	<modIconPath IgnoreIfNoMatchingField="True">UI/AlphaVehiclesLogo</modIconPath>
@@ -54,8 +54,7 @@ Full changelog on GitHub
 
 		</description>
 	<loadAfter>
-		<li>Ludeon.RimWorld</li>
-		<li>brrainz.harmony</li>
+		
 		<li>SmashPhil.VehicleFramework</li>
 		<li>OskarPotocki.VanillaVehiclesExpanded</li>
 	</loadAfter>

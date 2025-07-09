@@ -2,14 +2,14 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
-		<defName>AV_Caravel</defName>
-		<label>Caravel</label>
-		<description>A caravel is a small, fast, and versatile sailing ship known for its narrow hull, multiple masts, and combination of square and lateen sails. It was widely used for exploration, trade, and naval activities during the Age of Discovery.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x3</description>
+		<defName>AV_Galleon</defName>
+		<label>Galleon</label>
+		<description>A large, multi-decked sailing ship primarily designed for transporting goods over long distances across oceans. It features a sturdy hull with ample cargo hold space, multiple masts rigged with square sails for propulsion, and a high stern and forecastle for additional cargo storage and crew quarters. Very slow on rivers due to their size.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Passenger x4</description>
 		<graphicData>
-			<texPath>Things/Vehicles/Sea/Tier1/AV_Caravel/AV_Caravel</texPath>
+			<texPath>Things/Vehicles/Sea/Tier2/AV_Galleon/AV_Galleon</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(10,10)</drawSize>
+			<drawSize>(15,15)</drawSize>
 		
 			<color>(129, 85, 59)</color>
 			<colorTwo>(104, 64, 43)</colorTwo>
@@ -20,9 +20,9 @@
 		<fillPercent>1</fillPercent>
 		
 		
-		<buildDef>AV_Caravel_Blueprint</buildDef>
+		<buildDef>AV_Galleon_Blueprint</buildDef>
 		
-		<size>(4,7)</size>
+		<size>(5,9)</size>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
@@ -30,17 +30,17 @@
 		<vehicleType>Sea</vehicleType>
 				
 		<statBases>
-			<ArmorRating_Blunt>0.36</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.36</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
 			<ArmorRating_Heat>0</ArmorRating_Heat>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>3000</MarketValue>
 			<Flammability>1</Flammability>
 		</statBases>
 		
 		<vehicleStats>
-			<Mass>200</Mass>
-			<MoveSpeed>4</MoveSpeed>
-			<CargoCapacity>400</CargoCapacity>
+			<Mass>800</Mass>
+			<MoveSpeed>2</MoveSpeed>
+			<CargoCapacity>2000</CargoCapacity>
 			<RepairRate>1</RepairRate>
 		</vehicleStats>
 		
@@ -55,16 +55,16 @@
 		
 		
 		<race>
-			<baseBodySize>5</baseBodySize>
+			<baseBodySize>8</baseBodySize>
 		</race>
 		
 		<properties>
-			<fishing>true</fishing>
+			<fishing>false</fishing>
 			<diagonalRotation>false</diagonalRotation>
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
 			</track>
-			
+			<riverCost>3</riverCost>
 			<worldSpeedMultiplier>1</worldSpeedMultiplier>
 			<winterSpeedMultiplier>5</winterSpeedMultiplier>
 			
@@ -88,9 +88,27 @@
 					
 				</li>
 				<li>
+					<key>boatswain</key>
+					<label>Boatswain</label>
+					<exposed>false</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					
+				</li>
+				<li>
 					<key>Passenger</key>
 					<label>Passenger</label>
-					<slots>3</slots>
+					<slots>4</slots>
 					<exposed>false</exposed>
 					
 					<hitbox>
@@ -110,7 +128,7 @@
 			<li>
 				<key>Mizzen</key>
 				<label>Mizzen</label>
-				<health>30</health>
+				<health>60</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>External</depth>
 				
@@ -123,7 +141,7 @@
 			<li>
 				<key>MainMast</key>
 				<label>Main mast</label>
-				<health>30</health>
+				<health>60</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>External</depth>
 				
@@ -136,7 +154,7 @@
 			<li>
 				<key>Foremast</key>
 				<label>Foremast</label>
-				<health>30</health>
+				<health>60</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>External</depth>
 				
@@ -180,7 +198,7 @@
 			<li>
 				<key>Keel</key>
 				<label>Keel</label>
-				<health>40</health>
+				<health>140</health>
 				<depth>External</depth>
 				
 				<hitbox>
@@ -190,7 +208,7 @@
 			<li>
 				<key>Rudder</key>
 				<label>Rudder</label>
-				<health>40</health>
+				<health>140</health>
 				<depth>External</depth>
 				
 				<hitbox>

@@ -2,27 +2,28 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
-		<defName>AV_Longship</defName>
-		<label>Longship</label>
-		<description>A type of narrow and relatively long boat with a sleek design, often equipped with sails for propulsion. It is commonly used for various purposes such as transportation, exploration, and warfare throughout history. Very fast for map travel, bot slow when crossing oceans in the world map.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x2</description>
+		<defName>AV_Brig</defName>
+		<label>Brig</label>
+		<description>A two-masted sailing vessel with square rigging on both masts, typically carrying a fore-and-aft sail on the aftermast. Brigs were widely used for both naval and merchant purposes due to their combination of maneuverability and relatively large cargo capacity. Very slow on rivers due to their size.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Passenger x10</description>
+	
 		<graphicData>
-			<texPath>Things/Vehicles/Sea/Tier0/AV_Longship/AV_Longship</texPath>
+			<texPath>Things/Vehicles/Sea/Tier2/AV_Brig/AV_Brig</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(8,8)</drawSize>
+			<drawSize>(15,15)</drawSize>
 		
-			<color>(129, 85, 59)</color>
-			<colorTwo>(104, 64, 43)</colorTwo>
-			<colorThree>(70, 45, 35)</colorThree>
-			<pattern>AV_Pattern_PlainLogs</pattern>
+			<color>(189, 182, 173)</color>
+			<colorTwo>(202, 196, 187)</colorTwo>
+			<colorThree>(93, 88, 77)</colorThree>
+			<pattern>AV_Pattern_Logs</pattern>
 		</graphicData>
 		
 		<fillPercent>1</fillPercent>
 		
 		
-		<buildDef>AV_Longship_Blueprint</buildDef>
+		<buildDef>AV_Brig_Blueprint</buildDef>
 		
-		<size>(3,6)</size>
+		<size>(5,9)</size>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
@@ -30,17 +31,17 @@
 		<vehicleType>Sea</vehicleType>
 				
 		<statBases>
-			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 			<ArmorRating_Heat>0</ArmorRating_Heat>
-			<MarketValue>1000</MarketValue>
+			<MarketValue>3250</MarketValue>
 			<Flammability>1</Flammability>
 		</statBases>
 		
 		<vehicleStats>
-			<Mass>250</Mass>
-			<MoveSpeed>6</MoveSpeed>
-			<CargoCapacity>100</CargoCapacity>
+			<Mass>500</Mass>
+			<MoveSpeed>5</MoveSpeed>
+			<CargoCapacity>500</CargoCapacity>
 			<RepairRate>1</RepairRate>
 		</vehicleStats>
 		
@@ -55,24 +56,25 @@
 		
 		
 		<race>
-			<baseBodySize>4</baseBodySize>
+			<baseBodySize>8</baseBodySize>
 		</race>
 		
 		<properties>
-			<fishing>true</fishing>
+			<fishing>false</fishing>
 			<diagonalRotation>false</diagonalRotation>
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
 			</track>
+			<riverCost>3</riverCost>
 			
-			<worldSpeedMultiplier>0.5</worldSpeedMultiplier>
-			<winterSpeedMultiplier>2</winterSpeedMultiplier>
+			<worldSpeedMultiplier>1.3</worldSpeedMultiplier>
+			<winterSpeedMultiplier>4</winterSpeedMultiplier>
 			
 			<roles>
 				<li>
 					<key>driver</key>
 					<label>Helmsman</label>
-					<exposed>true</exposed>
+					<exposed>false</exposed>
 					
 					<handlingTypes>
 						<li>Movement</li>
@@ -85,20 +87,30 @@
 						<side>Back</side>
 					</hitbox>
 					
-					<pawnRenderer>
-						<layerSouth>-1</layerSouth>
-						<layerNorth>1</layerNorth>
 					
-						<drawOffsetNorth>(0, 0, -0.55)</drawOffsetNorth>
-						<drawOffsetSouth>(0, 0, 0.55)</drawOffsetSouth>
-						<drawOffsetEast>(-0.55, 0, -0.4)</drawOffsetEast>
-						<drawOffsetWest>(0.55, 0, -0.4)</drawOffsetWest>
-					</pawnRenderer>
+				</li>
+				<li>
+					<key>boatswain</key>
+					<label>Boatswain</label>
+					<exposed>false</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					
 				</li>
 				<li>
 					<key>Passenger</key>
 					<label>Passenger</label>
-					<slots>2</slots>
+					<slots>10</slots>
 					<exposed>false</exposed>
 					
 					<hitbox>
@@ -115,10 +127,24 @@
 		
 		<components>
 
+			
 			<li>
 				<key>MainMast</key>
 				<label>Main mast</label>
-				<health>90</health>
+				<health>60</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				
+			</li>
+			<li>
+				<key>Foremast</key>
+				<label>Foremast</label>
+				<health>60</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>External</depth>
 				
@@ -139,30 +165,11 @@
 					<side>Body</side>
 				</hitbox>
 			</li>
-			<li>
-				<key>Shields</key>
-				<label>Shields</label>
-				<health>20</health>
-				<depth>External</depth>
-				
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-			</li>
-			<li>
-				<key>DragonHead</key>
-				<label>Dragon head</label>
-				<health>40</health>
-				<depth>External</depth>
-				
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-			</li>
+			
 			<li>
 				<key>Keel</key>
 				<label>Keel</label>
-				<health>40</health>
+				<health>140</health>
 				<depth>External</depth>
 				
 				<hitbox>
@@ -172,7 +179,7 @@
 			<li>
 				<key>Rudder</key>
 				<label>Rudder</label>
-				<health>40</health>
+				<health>140</health>
 				<depth>External</depth>
 				
 				<hitbox>

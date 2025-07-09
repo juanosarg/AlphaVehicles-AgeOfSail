@@ -4,7 +4,7 @@
 	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
 		<defName>AV_Frigate</defName>
 		<label>Frigate</label>
-		<description>A warship with a sleek design, fast and maneuverable, originally developed for escort and protection duties in the Age of Sail. Frigates usually feature a single continuous gun deck, carrying a mix of cannons and other armaments.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Gunner x1, Passenger x3</description>
+		<description>A warship with a sleek design, fast and maneuverable, originally developed for escort and protection duties in the Age of Sail. Frigates usually feature a single continuous gun deck, carrying a mix of cannons and other armaments. Very slow on rivers due to their size.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Boatswain x1, Gunner x1, Passenger x3</description>
 	
 		<graphicData>
 			<texPath>Things/Vehicles/Sea/Tier2/AV_Frigate/AV_Frigate</texPath>
@@ -63,7 +63,7 @@
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
 			</track>
-			
+			<riverCost>3</riverCost>
 			<worldSpeedMultiplier>1</worldSpeedMultiplier>
 			<winterSpeedMultiplier>5</winterSpeedMultiplier>
 			

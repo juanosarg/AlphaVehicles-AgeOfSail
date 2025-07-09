@@ -2,24 +2,25 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
-		<defName>AV_Junk</defName>
-		<label>Junk</label>
-		<description>A junk ship is a traditional sailing vessel known for its unique design, featuring a high stern and a flat bottom. It often employs multiple sails and was historically used for various maritime activities such as trade, fishing, and transportation.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Passenger x3</description>
-		
+		<defName>AV_Cog</defName>
+		<label>Cog</label>
+		<description>A medieval sailing vessel characterized by a sturdy, broad-bottomed design with a single mast and a square-rigged sail. It was commonly used for trade, transportation, and exploration during the Middle Ages in Europe. Very slow for map travel, bot very fast when crossing oceans in the world map.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1.</description>
 		<graphicData>
-			<texPath>Things/Vehicles/Sea/Tier0/AV_Junk/AV_Junk</texPath>
+			<texPath>Things/Vehicles/Sea/Tier0/AV_Cog/AV_Cog</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(8,8)</drawSize>
 		
-			<color>(77, 35, 25)</color>
-		
+			<color>(129, 85, 59)</color>
+			<colorTwo>(104, 64, 43)</colorTwo>
+			<colorThree>(70, 45, 35)</colorThree>
+			<pattern>AV_Pattern_PlainLogs</pattern>
 		</graphicData>
 		
 		<fillPercent>1</fillPercent>
 		
 		
-		<buildDef>AV_Junk_Blueprint</buildDef>
+		<buildDef>AV_Cog_Blueprint</buildDef>
 		
 		<size>(3,6)</size>
 		
@@ -29,17 +30,17 @@
 		<vehicleType>Sea</vehicleType>
 				
 		<statBases>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
 			<ArmorRating_Heat>0</ArmorRating_Heat>
-			<MarketValue>750</MarketValue>
+			<MarketValue>1000</MarketValue>
 			<Flammability>1</Flammability>
 		</statBases>
 		
 		<vehicleStats>
 			<Mass>250</Mass>
-			<MoveSpeed>3</MoveSpeed>
-			<CargoCapacity>200</CargoCapacity>
+			<MoveSpeed>2</MoveSpeed>
+			<CargoCapacity>500</CargoCapacity>
 			<RepairRate>1</RepairRate>
 		</vehicleStats>
 		
@@ -63,15 +64,16 @@
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
 			</track>
+			<riverCost>1</riverCost>
 			
-			<worldSpeedMultiplier>0.9</worldSpeedMultiplier>
+			<worldSpeedMultiplier>1.2</worldSpeedMultiplier>
 			<winterSpeedMultiplier>5</winterSpeedMultiplier>
 			
 			<roles>
 				<li>
 					<key>driver</key>
 					<label>Helmsman</label>
-					<exposed>true</exposed>
+					<exposed>false</exposed>
 					
 					<handlingTypes>
 						<li>Movement</li>
@@ -84,51 +86,19 @@
 						<side>Back</side>
 					</hitbox>
 					
-					<pawnRenderer>
-						
-					
-						<drawOffsetNorth>(0, 0, -0.55)</drawOffsetNorth>
-						<drawOffsetSouth>(0, 0, 0.55)</drawOffsetSouth>
-						<drawOffsetEast>(-0.55, 0, -0.5)</drawOffsetEast>
-						<drawOffsetWest>(0.55, 0, -0.5)</drawOffsetWest>
-					</pawnRenderer>
-				</li>
-				<li>
-					<key>Passenger</key>
-					<label>Passenger</label>
-					<slots>3</slots>
-					<exposed>false</exposed>
-					
-					<hitbox>
-						<side>Body</side>
-						<noOverlapWith>
-							<li>Back</li>
-						</noOverlapWith>
-					</hitbox>
 					
 				</li>
+				
 				
 			</roles>
 		</properties>
 		
 		<components>
-			<li>
-				<key>Mizzen</key>
-				<label>Mizzen</label>
-				<health>30</health>
-				<priorityStatEfficiency>true</priorityStatEfficiency>
-				<depth>External</depth>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-				
-				
-			</li>
+
 			<li>
 				<key>MainMast</key>
 				<label>Main mast</label>
-				<health>30</health>
+				<health>90</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>External</depth>
 				
@@ -138,19 +108,7 @@
 				
 				
 			</li>
-			<li>
-				<key>Foremast</key>
-				<label>Foremast</label>
-				<health>30</health>
-				<priorityStatEfficiency>true</priorityStatEfficiency>
-				<depth>External</depth>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-				
-				
-			</li>
+			
 			<li>
 				<key>WoodenHull</key>
 				<label>Main wooden hull</label>
@@ -161,7 +119,37 @@
 					<side>Body</side>
 				</hitbox>
 			</li>
-			
+			<li>
+				<key>Castle</key>
+				<label>Castle</label>
+				<health>45</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Forecastle</key>
+				<label>Forecastle</label>
+				<health>45</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+		
+			<li>
+				<key>Keel</key>
+				<label>Keel</label>
+				<health>40</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
 			<li>
 				<key>Rudder</key>
 				<label>Rudder</label>

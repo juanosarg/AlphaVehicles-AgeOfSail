@@ -4,7 +4,7 @@
 	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
 		<defName>AV_PirateCaravel</defName>
 		<label>Pirate caravel</label>
-		<description>A caravel is a small, fast, and versatile sailing ship known for its narrow hull, multiple masts, and combination of square and lateen sails. It was widely used for exploration, trade, and naval activities during the Age of Discovery. This caravel has been modified to act as a fast moving warship.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Gunner x1, Passenger x2</description>
+		<description>A caravel is a small, fast, and versatile sailing ship known for its narrow hull, multiple masts, and combination of square and lateen sails. It was widely used for exploration, trade, and naval activities during the Age of Discovery. This caravel has been modified to act as a fast moving warship. Quite slow on rivers.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Helmsman x1, Gunner x1, Passenger x2</description>
 		<graphicData>
 			<texPath>Things/Vehicles/Sea/Tier1/AV_PirateCaravel/AV_PirateCaravel</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
@@ -64,6 +64,7 @@
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
 			</track>
+			<riverCost>2</riverCost>
 			
 			<worldSpeedMultiplier>1</worldSpeedMultiplier>
 			<winterSpeedMultiplier>5</winterSpeedMultiplier>
