@@ -17,7 +17,7 @@
 		<rotationSpeed>1.2</rotationSpeed>
 		<restrictionType>Vehicles.TurretRestrictions_Stationary</restrictionType>
 		<projectileOffset>2.5</projectileOffset>
-		<hitFlags>IntendedTarget</hitFlags>
+		
 		<maxRange>30</maxRange>
 		<minRange>8</minRange>
 		
@@ -28,9 +28,9 @@
 		</vehicleRecoil>
 		<fireModes>
 			<li>
-				<shotsPerBurst>5</shotsPerBurst>
-				<ticksBetweenBursts>10</ticksBetweenBursts>
-				<spreadRadius>15</spreadRadius>
+				<shotsPerBurst>5~5</shotsPerBurst>
+				<ticksBetweenBursts>10~10</ticksBetweenBursts>
+				<forcedMissRadius>15</forcedMissRadius>
 				<label>Broadside</label>
 				<texPath>UI/Gizmos/AV_Broadside</texPath>
 			</li>
@@ -70,7 +70,7 @@
 		<rotationSpeed>1.2</rotationSpeed>
 		<restrictionType>Vehicles.TurretRestrictions_Stationary</restrictionType>
 		<projectileOffset>2.5</projectileOffset>
-		<hitFlags>IntendedTarget</hitFlags>
+		
 		<maxRange>30</maxRange>
 		<minRange>8</minRange>
 		
@@ -81,9 +81,9 @@
 		</vehicleRecoil>
 		<fireModes>
 			<li>
-				<shotsPerBurst>5</shotsPerBurst>
-				<ticksBetweenBursts>10</ticksBetweenBursts>
-				<spreadRadius>15</spreadRadius>
+				<shotsPerBurst>5~5</shotsPerBurst>
+				<ticksBetweenBursts>10~10</ticksBetweenBursts>
+				<forcedMissRadius>15</forcedMissRadius>
 				<label>Broadside</label>
 				<texPath>UI/Gizmos/AV_Broadside</texPath>
 			</li>

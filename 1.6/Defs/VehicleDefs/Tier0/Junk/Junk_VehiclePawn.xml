@@ -23,7 +23,7 @@
 		
 		<size>(3,6)</size>
 		
-		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		
 		<vehicleCategory>Transport</vehicleCategory>
 		<techLevel>Medieval</techLevel>
 		<vehicleType>Sea</vehicleType>
@@ -102,9 +102,7 @@
 					
 					<hitbox>
 						<side>Body</side>
-						<noOverlapWith>
-							<li>Back</li>
-						</noOverlapWith>
+						
 					</hitbox>
 					
 				</li>

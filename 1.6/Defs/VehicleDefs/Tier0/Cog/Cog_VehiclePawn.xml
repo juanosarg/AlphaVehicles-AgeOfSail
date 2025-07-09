@@ -24,7 +24,7 @@
 		
 		<size>(3,6)</size>
 		
-		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		
 		<vehicleCategory>Transport</vehicleCategory>
 		<techLevel>Medieval</techLevel>
 		<vehicleType>Sea</vehicleType>
