@@ -10,7 +10,12 @@
 		<graphicData>
 			<texPath>Things/Vehicles/Sea/Tier0/AV_Longship/AV_Longship</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(8,8)</drawSize>
+			<drawSize>(9,9)</drawSize>
+			<drawOffset>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>0.5</z>
+			</drawOffset>
 		</graphicData>
 		<designationCategory>VF_Vehicles</designationCategory>
 		<statBases>
@@ -19,7 +24,7 @@
 			<Flammability>1</Flammability>
 		</statBases>
 		
-		<size>(3, 6)</size>
+		<size>(2,8)</size>
 		
 	
 		
